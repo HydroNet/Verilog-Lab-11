@@ -1,0 +1,102 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
+
+==============================================================================
+
+Section Cross References
+
+    mystartup.o(RESET) refers to user_code.o(usercode) for user_code
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      452  mystartup.o(RESET)
+    mystartup.s                              0x00000000   Number         0  mystartup.o ABSOLUTE
+    user_code.s                              0x00000000   Number         0  user_code.o ABSOLUTE
+    ResetHandler                             0x00000040   ARM Code       0  mystartup.o(RESET)
+    SWIHandler                               0x0000015c   ARM Code       4  mystartup.o(RESET)
+    PAbtHandler                              0x00000160   ARM Code       4  mystartup.o(RESET)
+    DAbtHandler                              0x00000164   ARM Code       4  mystartup.o(RESET)
+    IRQHandler                               0x00000168   ARM Code       0  mystartup.o(RESET)
+    FIQHandler                               0x00000174   ARM Code       4  mystartup.o(RESET)
+    UndefHandler                             0x00000178   ARM Code       4  mystartup.o(RESET)
+    usercode                                 0x000001c4   Section      200  user_code.o(usercode)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    user_code                                0x000001c4   ARM Code       0  user_code.o(usercode)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x0000028c, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x0000028c, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000001c4   Code   RO            1  * RESET               mystartup.o
+    0x000001c4   0x000000c8   Code   RO            6    usercode            user_code.o
+
+
+    Execution Region ER_RW (Base: 0x40000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region ER_ZI (Base: 0x40000000, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       452        100          0          0          0        328   mystartup.o
+       200         12          0          0          0        240   user_code.o
+
+    ----------------------------------------------------------------------
+       652        112          0          0          0        568   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       652        112          0          0          0        568   Grand Totals
+       652        112          0          0          0        568   ELF Image Totals
+       652        112          0          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  652 (   0.64kB)
+    Total RW  Size (RW Data + ZI Data)                 0 (   0.00kB)
+    Total ROM Size (Code + RO Data + RW Data)        652 (   0.64kB)
+
+==============================================================================
+

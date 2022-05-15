@@ -1,0 +1,1 @@
+.\mystartup.o: mystartup.s
